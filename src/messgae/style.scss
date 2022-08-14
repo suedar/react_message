@@ -1,0 +1,56 @@
+
+$message-padding-x:                  1.5rem !default;
+$message-padding-y:                  .75rem !default;
+$message-margin-y:                   .75rem !default;
+$message-icon-margin-x:              8px !default;
+$white: #fff;
+$box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d !default;
+
+.message-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1050;
+
+  &,
+  .message {
+    pointer-events: none;
+  }
+
+  .message {
+    text-align: center;
+    margin-top: $message-margin-y;
+    margin-bottom: $message-margin-y;
+
+    .message-content {
+      display: inline-flex;
+      align-items: flex-end;
+      background: $white;
+      box-shadow: $box-shadow;
+      padding: 10px 16px;
+      color: #000000d9;
+      font-size: 14px;
+
+      &-icon {
+        margin-right: $message-icon-margin-x;
+
+        &-info {
+          color: #1564b1;
+        }
+
+        &-error {
+          color: #af3637;
+        }
+
+        &-warning {
+          color: #ad7812;
+        }
+
+        &-success {
+          color: #3a8715;
+        }
+      }
+    }
+  }
+}
